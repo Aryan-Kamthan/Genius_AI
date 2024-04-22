@@ -41,6 +41,7 @@ const PhotoPage = () => {
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
       setPhotos([]);
+      console.log(values)
 
       const response = await axios.post('/api/image', values);
 
@@ -92,7 +93,7 @@ const PhotoPage = () => {
                     <Input
                       className="border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
                       disabled={isLoading} 
-                      placeholder="A picture of a horse in Swiss alps" 
+                      placeholder="A picture of a group of friends sitting on lakeside " 
                       {...field}
                     />
                   </FormControl>

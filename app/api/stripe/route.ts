@@ -36,17 +36,17 @@ export async function GET() {
       cancel_url: settingsUrl,
       payment_method_types: ["card"],
       mode: "subscription",
-      billing_address_collection: "auto",
+      billing_address_collection: "required",
       customer_email: user.emailAddresses[0].emailAddress,
       line_items: [
         {
           price_data: {
-            currency: "USD",
+            currency: "INR",
             product_data: {
               name: "Genius Pro",
               description: "Unlimited AI Generations"
             },
-            unit_amount: 2000,
+            unit_amount: 20000,
             recurring: {
               interval: "month"
             }
